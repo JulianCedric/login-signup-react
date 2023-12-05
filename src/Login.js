@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 
 const Login = ({ handleLogin }) => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [ username, setUsername ] = useState('');
+    const [ password, setPassword ] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -38,7 +38,6 @@ const Login = ({ handleLogin }) => {
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
-
                         <Button color='blue' fluid size='large'>
                             Login
                         </Button>

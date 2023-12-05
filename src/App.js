@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import Login from './Login';
 import { Button } from 'semantic-ui-react';
+import Signup from './Signup';
 
 const USERS = [
   {
     id: 1,
+    firstName: 'Lil',
+    lastName: 'JJ',
     username: 'user1',
     password: 'pass1'
   }
 ];
 
 const App = () => {
-  const [users, setUsers] = useState(USERS);
+  const [ users, setUsers ] = useState(USERS);
 
   const handleInitialize = message => {
     console.log('[ TEST ] message:', message);
@@ -34,6 +37,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Signup />
       <Login handleLogin={handleLogin} />
       <Button 
         color='blue'
