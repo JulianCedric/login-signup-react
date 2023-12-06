@@ -3,7 +3,7 @@ import Login from './Login';
 import { Button } from 'semantic-ui-react';
 import Signup from './Signup';
 import Clock from './Clock';
-import Tasks from './Tasks';
+// import Tasks from './Tasks';
 
 const USERS = [
   {
@@ -22,7 +22,12 @@ const App = () => {
     console.log('[ TEST ] message:', message);
   };
 
-  const handleLogin = (e) => {
+  // const handleRenderTasksBtn = () => {
+  //   console.log('tasks:', tasks);
+  //   console.log('TASKS:', TASKS);
+  // };
+
+  const handleLogin = e => {
     e.preventDefault();
     console.log('Login event:', e);
     console.log('e.target[0].value:', e.target[0].value);
@@ -39,7 +44,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Tasks />
+      {/* <Tasks props={tasks}/> */}
       <Clock />
       <Signup />
       <Login handleLogin={handleLogin} />
@@ -49,6 +54,12 @@ const App = () => {
       >
         Initialize
       </Button>
+      {/* <Button
+        color='orange'
+        onClick={handleRenderTasksBtn('user clicked render tasks btn')}
+      >
+        Render Tasks
+      </Button> */}
       <div>
         <h1>here</h1>
       </div>

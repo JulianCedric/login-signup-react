@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import Task from './Task';
 
-const Tasks = () => {
+const TASKS = [
+    {
+      id: 1,
+      desc: ''
+    }
+  ];
+
+const Tasks = props => {
     const [ desc, setDesc ] = useState('');
+    const [ tasks, setTasks ] = useState(TASKS);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +24,7 @@ const Tasks = () => {
             <h1>Tasks [ Container ]</h1>
             <p>Tasks:</p>
             <ul className='tasks'>
-                <li>example task</li>
+                <Task props={tasks}/>
             </ul>
         </div>
             <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
