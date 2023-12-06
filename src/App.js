@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Login from './Login';
 import { Button } from 'semantic-ui-react';
 import Signup from './Signup';
+import Clock from './Clock';
+import Tasks from './Tasks';
 
 const USERS = [
   {
@@ -37,6 +39,8 @@ const App = () => {
 
   return (
     <div className="App">
+      <Tasks />
+      <Clock />
       <Signup />
       <Login handleLogin={handleLogin} />
       <Button 
