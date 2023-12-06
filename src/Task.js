@@ -1,12 +1,11 @@
 import React from 'react';
+import { Checkbox, List } from 'semantic-ui-react';
 
-const Task = props => {
-    console.log('props:', props);
+const Task = desc => {
     return (
-        <>
-            <p>Task:</p>
-            <li>{props.desc}</li>
-        </>
+        <List.Item>
+            <Checkbox label={desc}/>
+        </List.Item>
     );
 };
 
