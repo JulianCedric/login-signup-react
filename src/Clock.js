@@ -40,7 +40,7 @@ function Clock() {
       <div>
       <Header
       as='h3'
-      content='Stackable Vertically Divided Grid'
+      content='Time Containers Container'
       // style={style.h3}
       textAlign='center'
     />
@@ -56,7 +56,12 @@ function Clock() {
       <Grid.Row>
         <Grid.Column>
           <Segment>
-            <p>Time Container 1 of 7 Dos:</p>
+            <p>Time Container 1 of 7 ASSIST:</p>
+          </Segment>
+        </Grid.Column>
+        <Grid.Column>
+          <Segment>
+            <p>Time Container 1 of 7:</p>
             <Card>
               <Card.Content>
                 <Card.Header>Time Container Title</Card.Header>
@@ -72,18 +77,15 @@ function Clock() {
               <Card.Content extra>
                 <div className='ui two buttons'>
                   <Button basic color='green'>
-                    Approve
+                    Y
                   </Button>
                   <Button basic color='red'>
-                    Decline
+                    N
                   </Button>
                 </div>
               </Card.Content>
             </Card>
           </Segment>
-        </Grid.Column>
-        <Grid.Column>
-          <Segment>Time Container 1 of 7 Don'ts:</Segment>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
@@ -93,24 +95,24 @@ function Clock() {
             <Card>
               <Card.Content>
                 <Card.Header>It's time to do your Daily Exercise Routine, Julian.</Card.Header>
-                <Card.Meta>This is your Keystone Habit. Doing it completely and correctly will cause an overall improvement to your current state. Approximate duration: 1.5 hours. Recurrence: Daily, Morning.</Card.Meta>
+                <Card.Meta>This is your Keystone Routine. Doing it completely and correctly will cause an overall improvement to your current state. Approximate duration: 1.5 hours. Recurrence: Daily, Morning.</Card.Meta>
                 <Card.Description>
                   <List>
                     <List.Item><Checkbox label='Put on running gear.'/></List.Item>
                     <List.Item><Checkbox label='Walk to gym.'/></List.Item>
                     <List.Item><Checkbox label='Treadmill for at least 2 miles.'/></List.Item>
                     <List.Item><Checkbox label='Sauna for at least 20 minutes.'/></List.Item>
-                    <List.Item><Checkbox label='Shower and get dressed for the day'/></List.Item>
+                    <List.Item><Checkbox label='Shower and get dressed for the day.'/></List.Item>
                   </List>
                 </Card.Description>
               </Card.Content>
               <Card.Content extra>
                 <div className='ui two buttons'>
                   <Button basic color='green'>
-                    Approve
+                    Y
                   </Button>
                   <Button basic color='red'>
-                    Decline
+                    N
                   </Button>
                 </div>
               </Card.Content>
@@ -123,35 +125,16 @@ function Clock() {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Segment>
-            <p>Time Container 1 of 7:</p>
-            <Card>
-              <Card.Content>
-                <Card.Header>It's time to do your Daily Exercise Routine, Julian.</Card.Header>
-                <Card.Meta>This is your Keystone Habit. Doing it completely and correctly will cause an overall improvement to your current state. Approximate duration: 1 hour. Recurrence: Daily, Morning.</Card.Meta>
-                <Card.Description>
-                  <List>
-                    <List.Item><Checkbox label='Groceries'/></List.Item>
-                    <List.Item><Checkbox label='Laundery'/></List.Item>
-                    <List.Item><Checkbox label='Trash'/></List.Item>
-                  </List>
-                </Card.Description>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui two buttons'>
-                  <Button basic color='green'>
-                    Approve
-                  </Button>
-                  <Button basic color='red'>
-                    Decline
-                  </Button>
-                </div>
-              </Card.Content>
-            </Card>
+          <Segment>Time Container 1 of 7:
           </Segment>
         </Grid.Column>
         <Grid.Column>
           <Segment>Time Container 1 of 7 ASSIST:</Segment>
+          <div>
+            <p>Remember, this important routine contains your KEYSTONE HABIT.</p>
+            <p>A Keystone Habit is THE-ONE Habit that makes all the rest easier to do.</p>
+            <p>From a bigger picture perspective, simply <em>doing</em> your routines is <strong>far</strong> more important than how well you do them .. if there's no regularity / consistency .. inconsistently versus how well simplying doing each of your routines is </p>
+          </div>
         </Grid.Column>
       </Grid.Row>
     </Grid>
