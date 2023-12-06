@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar';
+import Home from './Home';
 import Login from './Login';
-import { Button } from 'semantic-ui-react';
 import Signup from './Signup';
+import Tasks from './Tasks';
 import Clock from './Clock';
-// import Tasks from './Tasks';
 
 const USERS = [
   {
@@ -43,27 +45,18 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      {/* <Tasks props={tasks}/> */}
-      <Clock />
-      <Signup />
-      <Login handleLogin={handleLogin} />
-      <Button 
-        color='blue'
-        onClick={() => handleInitialize('Login rendered.')}
-      >
-        Initialize
-      </Button>
-      {/* <Button
-        color='orange'
-        onClick={handleRenderTasksBtn('user clicked render tasks btn')}
-      >
-        Render Tasks
-      </Button> */}
-      <div>
-        <h1>here</h1>
+    <Router>
+      <div className="App">
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/signup' element={<Signup/>}/>
+          <Route path='/tasks' element={<Tasks/>}/>
+          <Route path='*' element={<Home/>}/>
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 };
 

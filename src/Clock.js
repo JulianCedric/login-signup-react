@@ -125,16 +125,11 @@ function Clock() {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Segment>Time Container 1 of 7:
+          <Segment>Time Container 1 of 7 ASSIST:
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment>Time Container 1 of 7 ASSIST:</Segment>
-          <div>
-            <p>Remember, this important routine contains your KEYSTONE HABIT.</p>
-            <p>A Keystone Habit is THE-ONE Habit that makes all the rest easier to do.</p>
-            <p>From a bigger picture perspective, simply <em>doing</em> your routines is <strong>far</strong> more important than how well you do them .. if there's no regularity / consistency .. inconsistently versus how well simplying doing each of your routines is </p>
-          </div>
+          <Segment>Time Container 1 of 7:</Segment>
         </Grid.Column>
       </Grid.Row>
     </Grid>
