@@ -12,30 +12,27 @@ const USERS = [
     id: 1,
     firstName: 'Lil',
     lastName: 'JJ',
-    username: 'user1',
-    password: 'pass1'
+    username: 'admin1',
+    password: 'admin1'
   }
 ];
 
 const App = () => {
   const [ users, setUsers ] = useState(USERS);
+  const [ toggleLogin, setToggleLogin ] = useState(true);
 
-  const handleInitialize = message => {
-    console.log('[ TEST ] message:', message);
-  };
-
-  // const handleRenderTasksBtn = () => {
-  //   console.log('tasks:', tasks);
-  //   console.log('TASKS:', TASKS);
-  // };
-
-  const handleLogin = e => {
+  const handleLogin = (e, username, password) => {
     e.preventDefault();
-    console.log('Login event:', e);
-    console.log('e.target[0].value:', e.target[0].value);
+
+    console.log('e:', e);
+    console.log('username:', username);
+    console.log('password:', password);
 
     if (e.target[0].value == 'user1' && e.target[1].value == 'pass1') {
       console.log('user logged in');
+      setToggleLogin(prevState => {
+        return !prevState;
+      });
     } else {
       alert('The username or password you entered is incorrect. Please try again.');
       e.target[0].value = '';
@@ -50,9 +47,14 @@ const App = () => {
         <NavBar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/login' element={<Login/>}/>
+          { toggleLogin ? 
+              <Route path='/login' element={<Login onLogin={handleLogin}/>}/>
+            :
+              <Route path='/tasks' element={<Tasks/>}/>
+            }
+          
           <Route path='/signup' element={<Signup/>}/>
-          <Route path='/tasks' element={<Tasks/>}/>
+          
           <Route path='*' element={<Home/>}/>
         </Routes>
       </div>

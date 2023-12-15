@@ -2,13 +2,25 @@ import React, { useState } from 'react';
 
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 
-const Login = ({ handleLogin }) => {
+const Login = ({ onLogin }) => {
     const [ username, setUsername ] = useState('');
     const [ password, setPassword ] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleChange = e => {
+        console.log('something e', e);
+        setUsername(e.target.value);
+    };
+    
+    const handleSubmit = e => {
         e.preventDefault();
-        handleLogin(e);
+
+        console.log('e:', e);
+        console.log('e.target:', e.target);
+        console.log('username:', username);
+        console.log('password:', password);
+
+        onLogin(e, username, password);
+
     };
 
     return (
@@ -20,13 +32,14 @@ const Login = ({ handleLogin }) => {
                 <Form size='large' onSubmit={handleSubmit}>
                     <Segment stacked>
                         <Form.Input 
+                            autoFocus
                             fluid 
                             icon='user' 
                             iconPosition='left' 
                             placeholder='Username' 
                             type='text'
                             value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            onChange={handleChange}
                             required
                         />
                         <Form.Input
