@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from 'semantic-ui-react';
 import NavBar from './NavBar';
 import Home from './Home';
 import Login from './Login';
@@ -45,21 +46,21 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Lab />
-        <NavBar/>
-        <Clock />
-        <Routes>
+        <Header>
+          <NavBar/>
+        </Header>
+        <Lab/>
+        {/* <Clock /> */}
+        {/* <Routes>
           <Route path='/' element={<Home/>}/>
           { toggleLogin ? 
               <Route path='/login' element={<Login onLogin={handleLogin}/>}/>
             :
               <Route path='/tasks' element={<Tasks/>}/>
             }
-          
           <Route path='/signup' element={<Signup/>}/>
-          
           <Route path='*' element={<Home/>}/>
-        </Routes>
+        </Routes> */}
       </div>
     </Router>
   );
