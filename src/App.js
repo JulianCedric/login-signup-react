@@ -6,6 +6,7 @@ import Login from './Login';
 import Signup from './Signup';
 import Tasks from './Tasks';
 import Clock from './Clock';
+import Lab from './Lab';
 
 const USERS = [
   {
@@ -44,7 +45,9 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        <Lab />
         <NavBar/>
+        <Clock />
         <Routes>
           <Route path='/' element={<Home/>}/>
           { toggleLogin ? 
